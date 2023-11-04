@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VibeTV</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 
 <body>
@@ -16,7 +17,7 @@
     <header class="header-part">
         <div class="logo-part">
             <h1 class="header-part__title">Vibe</h1>
-            <img src="img/tv-logo.png" alt="" class="header-part__logo">
+            <img src="{% static 'img/tv-logo.png' %}" alt="" class="header-part__logo">
         </div>
         <nav class="nav-part">
             <ul>
@@ -36,7 +37,7 @@
                     ,<b>IOS</b><b>,PC</b>,<b>Laptops</b>.</p>
             </div>
             <div class="image-part">
-                <img src="img/one-common-device-image.png" alt="">
+                <img src="{% static 'img/one-common-device-image.png' %}" alt="">
 
             </div>
         </section>
@@ -61,7 +62,7 @@
         </section>
     </main>
 </div>
-    <script src="app.js"></script>
+    <script src="{% static 'js/app.js' %}"></script>
 </body>
 
 </html>
