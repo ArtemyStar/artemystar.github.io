@@ -1,0 +1,267 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up or Log in </title>
+    <style>
+        @font-face{
+            font-family: 'Agbalumo';
+            src: local('Agbalumo'),
+            url(fonts/Agbalumo-Regular.ttf);
+
+        }
+        body{
+            background-image: url('img/backround-image.jpg');
+            overflow: hidden;
+            background-repeat: no-repeat;
+            background-size: cover;
+            opacity: 0.7;
+
+        }
+        .container:not(form){
+            background-color: black;
+         
+            
+            height:100vh;
+        }
+        select{
+            width: 130px;
+            height: 50px;
+            border-radius: 20px;
+            font-size: 20px;
+            text-align: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            float: right;
+            margin: 80px 300px 0 0;
+        }
+        main{
+            display: flex;
+            transform: translateX(25%);
+            align-items: center;
+            height: 100vh;
+            
+        }
+        .form{
+            margin-left: 600px;
+            width: 500px;
+            height: 550px;
+            background-color:#fff;
+            filter: brightness(1.4);
+            text-align: center;
+              
+        }
+        form h1 {
+            
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            font-family: 'Agbalumo';
+            cursor: pointer;
+            color: #3c00a0;
+            font-size: 40px;
+        }
+        .form h1::after{
+            content:'_';
+            display: flex;
+            justify-content: center;
+            transform: translateY(-60%);
+        }
+        input#name{
+            border: none;
+            outline: none;
+            font-size: 20px;
+            background-color: black;
+            color: white;
+            font-family: 'Agbalumo';
+            width: 60%;
+            display: flex;
+
+        }
+        
+        .form__first-input img{
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+            padding-bottom: 5px;
+            cursor: pointer;
+            
+        }
+        .form__first-input{
+            display: flex;
+            padding-left: 40px;
+            background-color: black;
+            width: 60%;
+            transform: translateX(20%);
+            height: 70px;
+            align-items: center;
+            margin-bottom:40px;
+        }
+        input#gmail{
+            border: none;
+            outline: none;
+            font-size: 20px;
+            background-color: black;
+            color: white;
+            font-family: 'Agbalumo';
+            width: 60%;
+            display: flex;
+        }
+        .form__second-input img{
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+            padding-bottom: 5px;
+            cursor: pointer;
+        }
+        .form__second-input{
+            margin-top: 30px;
+            display: flex;
+            padding-left: 40px;
+            background-color: black;
+            width: 60%;
+            transform: translateX(20%);
+            height: 70px;
+            align-items: center;
+            
+        }
+        input#password{
+            border: none;
+            outline: none;
+            font-size: 20px;
+            background-color: black;
+            color: white;
+            font-family: 'Agbalumo';
+            width: 60%;
+            display: flex;
+        }
+        .form__third-input img{
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+            padding-bottom: 5px;
+            cursor: pointer;
+        }
+        .form__third-input{
+            margin-top: 40px;
+            display: flex;
+            padding-left: 40px;
+            background-color: black;
+            width: 60%;
+            transform: translateX(20%);
+            height: 70px;
+            align-items: center;
+            
+        }
+        .form__button-part{
+            margin-top: 30px;
+            display: flex;
+            justify-content: space-evenly;
+        }
+        
+        .form__button-part button{
+            display: flex;
+            flex-basis: 30%;
+            background-color:#3c00a0;
+            color: #fff;
+            height: 40px;
+            border-radius: 20px;
+            border: 0;
+            outline: 0;
+            cursor: pointer;
+            font-family: 'Agbalumo';
+            font-size: 20px;
+            justify-content: center;
+            align-items: center;
+            transition: 1s flex-basis;
+        }
+        #secondBtn{
+            background-color: red;
+        }
+        #secondBtn:hover{
+            
+            flex-basis: 35%;
+        }
+        .form__button-part button:nth-child(1):hover{
+            flex-basis: 35%;
+            transition: 1s flex-basis;
+        }
+        .form2{
+            height: 450px ; 
+            margin-left: 600px;
+            width: 500px;
+            height: 550px;
+            background-color:#fff;
+            filter: brightness(1.4);
+            text-align: center;
+            display: none;
+        }
+        .form2 h1::after{
+            content:'_';
+            display: flex;
+            justify-content: center;
+            transform: translateY(-60%);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header-part">
+            <select name="language" id="language">
+                <option value="english" selected>English</option>
+                <option value="russian">Russian</option>
+                <option value="romanian">Romanian</option>
+                <option value="german">German</option>
+                <option value="french">French</option>
+            </select>
+        </header>
+        <main class="main-part">
+            <form class="form" action="" method="post">
+                <h1 class="form__title">Sign up</h1>
+                
+                <div class="form__first-input">
+                    <img src="{% static 'img/user.png' %}" alt="">
+
+                    <input placeholder="Name" maxlength="26" required type="text" name="Name" id="name">
+                </div>
+                <div class="form__second-input">
+                    <img src="{% static 'img/gmail.png' %}" alt="">
+
+                    <input placeholder="Gmail"  required type="email" name="Gmail" id="gmail">
+                </div>
+                <div class="form__third-input">
+                    <img src="{% static 'img/passw.png' %}" alt="">
+
+                    <input placeholder="password"  required type="password" name="passw" id="password">
+                </div>
+                <div class="form__button-part">
+                    <button id="firstBtn" type="submit" id="singUp">Sign up</button>
+                    <button id="secondBtn" type="submit" id="logIn">Log in</button>
+                </div>
+            </form>
+            <form action="" method="post" class="form2">
+                <h1 class="form__title">Log in </h1>
+                
+               
+                <div class="form__second-input">
+                    <img src="{% static 'img/gmail.png' %}" alt="">
+
+                    <input placeholder="Gmail"  required type="email" name="Gmail" id="gmail">
+                </div>
+                <div class="form__third-input">
+                    <img src="{% static 'img/passw.png' %}" alt="">
+
+                    <input placeholder="password"  required type="password" name="passw" id="password">
+                </div>
+                <div class="form__button-part">
+                    <button id="firstBtn" type="submit" id="singUp">Sign up</button>
+                    <button id="secondBtn" type="submit" id="logIn">Log in</button>
+                </div>
+            </form>
+        </main>
+    </div>
+    <script src="{% static 'js/form.js' %}"></script>
+</body>
+</html>

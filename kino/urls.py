@@ -19,5 +19,6 @@ from login import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('form', views.form, name='form'),
     path('', views.index, name='home')
 ]
