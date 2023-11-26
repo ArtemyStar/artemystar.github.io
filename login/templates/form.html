@@ -219,23 +219,23 @@
         </header>
         <main class="main-part">
             <form class="form" action="" method="post">
+                {% csrf_token %}
                 <h1 class="form__title">Sign up</h1>
                 
                 <div class="form__first-input">
                     <img src="{% static 'img/user.png' %}" alt="">
-
-                    <input placeholder="Name" maxlength="26" required type="text" name="Name" id="name">
+                    {{ form.Name }}
                 </div>
                 <div class="form__second-input">
                     <img src="{% static 'img/gmail.png' %}" alt="">
-
-                    <input placeholder="Gmail"  required type="email" name="Gmail" id="gmail">
+                    {{ form.Gmail }}
                 </div>
                 <div class="form__third-input">
                     <img src="{% static 'img/passw.png' %}" alt="">
-
-                    <input placeholder="password"  required type="password" name="passw" id="password">
+                    {{ form.passw }}
                 </div>
+                <span>{{ error }}</span>
+                <button type="submit">Отправить</button>
                 <div class="form__button-part">
                     <button id="firstBtn" type="submit" id="singUp">Sign up</button>
                     <button id="secondBtn" type="submit" id="logIn">Log in</button>
