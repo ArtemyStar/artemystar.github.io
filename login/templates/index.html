@@ -13,27 +13,46 @@
 <body>
     <div class="container">
 
-    
     <header class="header-part">
         <div class="logo-part">
-            <h1 class="header-part__title">Vibe</h1>
-            <img src="{% static 'img/tv-logo.png' %}" alt="" class="header-part__logo">
+            <img src="{% static 'img/kino-logo.png' %}" alt="">
         </div>
         <nav class="nav-part">
-            <ul>
-                <li>About project</li>
-                <li>Development</li>
+            <ul class="header-ul">
+                <li id="aboutApp">About app</li>
+                <div class="block">
+                <li id="developp">Development</li>
+                <div class="appendInfo"></div>
+            </div>
             </ul>
+            <div class="info-about">
+                    <p>Me(Nikita) , and my partner Artemy started to develop this app since 0.7.10.2023.My task was 
+                        to develop all external parts of the app.Artemy's task was to develop all internal parts of the app.
+                        Technologies that we used:<b>HTML</b>,<b>CSS</b>,<b>JAVASCRIPT</b>,<br><b>PYTHON</b>.The backround of this app was made in Figma by me .We have made
+                        a lot of hard work ,so app will be workful.Our own key was to give people chance , to watch favourite films in a comfortable environment. 
+                    </p>
+                </div>
         </nav>
-        <button class="header-part__registration">
-            <a href="{% url 'form' %}">Sign in</a>
-        </button>
+        <select name="language" id="language">
+            <option value="english" selected>English</option>
+            <option value="russian">Russian</option>
+            <option value="romanian">Romanian</option>
+            <option value="german">German</option>
+            <option value="french">French</option>
+        </select>
+        <a href="form.html" target="_blank"  class="go-to-form">
+            
+            <button id="signBtn" type="button"  class="header-part__registration">
+                
+            </button>
+        </a>
+        
     </header>
     <main class="main-part">
         <section class="devices">
             <div class="text-part">
-                <h1 class="text-part__title">Watch films everywhere</h1>
-                <p class="text-part__description">Watch your favourite films on <b>Android</b>
+                <h1 id="titleDevices" class="text-part__title">Watch films everywhere</h1>
+                <p id="subTitleDevices" class="text-part__description">Watch your favourite films on <b>Android</b>
                     ,<b>IOS</b><b>,PC</b>,<b>Laptops</b>.</p>
             </div>
             <div class="image-part">
@@ -51,18 +70,179 @@
                     </div>
                     <div class="crest">
                         
-                    </div>          
+                    </div>   
+                    
                 </div>
+                <div class="wrapper"></div>
                 <div id="descr" class="facts__descr">
+                    
                     <p class="facts__descr-text">
-                        <b>VIBE TV</b> -is a web-app where you can watch different films,series based on your interest.
-                        Here are represented different types of films :<strong>ADVENTURE</strong>,<strong>SCI-FI</strong>,<strong>HORROR</strong>,<strong>THRILLER</strong> and others.
+                        <b>VIBE TV</b> -is a web-app where you can watch different films,series based on your preferences.
+                        Here are represented different types of films :<strong>Adventure</strong>,<strong>Sci-Fi</strong>,<strong>Horror</strong>,<strong>Thriller</strong> and others.
+                    </p>
+                    
+                </div>
+                <div class="question">
+                    <div class="title">Where can i watch films ?</div>
+                    <div class="open-btn" id="open2">
+                        <div class="line"></div>
+                    </div>
+                    <div class="crest2"></div>
+                </div>
+                <div class="wrapper"></div>
+                <div id="descr2" class="facts__descr">
+                    <p class="facts__descr-text2">
+                        To watch films ,you need to sign in your account.After that operation 
+                        ,you can watch any kinds of films based on your interest and individual preferences. 
+                        
                     </p>
                 </div>
+
+                <div class="question">
+                    <div class="title">What features does <strong>VibeTV</strong> provide?</div>
+                    <div class="open-btn" id="open3">
+                        <div class="line"></div>
+                    </div>
+                    <div class="crest3"></div>
+                </div>
+                <div class="wrapper"></div>
+                <div id="descr3" class="facts__descr">
+                    <p class="facts__descr-text3">
+                     
+                        <ol>
+                            <li id="firstLis">You can watch your favourite films in HD quality.</li>
+                            <li id="secondLis">You will find easily films based on your preferences.</li>
+                            <li id="thirdLis">You can register briefly ,without paying money</li>
+                            <li id="fourthLis">App updates regularly with new films,movies,mechanics</li>
+                        </ol>
+                        
+                    </p>
+                </div>
+                
+                <div class="question">
+                    <div class="title">What languages does this app support?</div>
+                    <div class="open-btn" id="open4">
+                        <div class="line"></div>
+                    </div>
+                    <div class="crest4"></div>
+                </div>
+                <div class="wrapper"></div>
+                <div id="descr4" class="facts__descr">
+                    <p class="facts__descr-text4">
+                        App supports languages:<strong>English</strong> ,<strong>Russian</strong> ,<strong>Romanian</strong>,<strong>German</strong> ,<strong>French</strong> 
+                    </p>
+                </div>
+                
+        </section>
+        <section class="slider">
+            <div class="slider__title">You can watch on VibeTV:</div>
+            <div class="slider__video-part">
+                <video id="video"  class="vid" src="{% static 'video/Kung-fu-panda2.mp4' %}" width="2000" height="600" controls  ></video>
+                <video id="video"src="{% static 'video/Star Wars.mp4' %}" width="2000" height="600" controls ></video>
+                <video id="video"src="{% static 'video/Batman.mp4' %}" width="2000" height="600" controls ></video>
+                <video id="video"src="{% static 'video/Superman.mp4' %}" width="2000" height="600" controls ></video>
+            </div>
+            
+            <div class="circles">
+                <button class="circle"></button>
+                <button class="circle"></button>
+                <button class="circle"></button>
+                <button class="circle"></button>
+            </div>
         </section>
     </main>
+    <footer class="footer-part">
+        <img src="{% static 'img/kino-logo.png' %}" alt="">
+        
+        <div class="contact-us">
+            
+            <h1 class="foot-title">Contact Us</h1>
+            <div class="appearImage">
+                <a href="https://t.me/Copy an obj :Json.parse(Json.stringify(obj))"><img src="{% static 'img/telegram.webp' %}" id="telegram"  alt=""></a>
+                <img id="viber" src="{%  static 'img/viber.png' %}" alt="">
+                <div class="appearText">
+                    <p></p>
+                    
+                    
+                </div>
+                <div class="press">
+                    <h2>PRESS <b>ESC</b> TO<br> RETURN BACK </h2>
+                </div>
+            </div>
+
+            <div class="contact-us__heading1" id="heading1">
+                <h2 class="subtitle ">Write a message</h2>
+                
+            </div>
+
+            <div class="contact-us__heading2" id="heading2">
+                
+                <a href="tel:+373 61 167 828"><h2 class="subtitle">Make a call</h2></a>
+            </div>
+            <div class="appearText2">
+                <a href="tel:+373 61 167 828"><p></p></a>
+            </div>
+            <div class="press">
+                
+                <h2 id="h2_second">PRESS <b>CTRL</b> TO<br> RETURN BACK </h2>
+            </div>
+        </div>
+        <div class="App-info">
+            <h1 class="foot-title">About App</h1>
+            <nav class="nav-menu">
+                <ul class="ul-list">
+                    <li class="ul-list__elem">What is VibeTV?</li> 
+                    <li class="ul-list__elem">What languages does this app support?</li>
+                    <li class="ul-list__elem">How can you start watching films?</li>
+                    <li class="ul-list__elem">Development </li>
+                    <div class="pushDoc"></div>
+                </ul>
+            </nav>
+        </div>
+        <div class="Developers">
+            <div class="foot-title">Developers</div>
+            <nav class="nav-menu">
+                <ul class="ul-list">
+                    <li class="ul-list__elem">About Developers </li>
+                    <div class="pushInfo">
+                     
+                            <div class="page page1">
+                                <p>Developers of this app <br>are:<b>Nikita</b>,<b>Artemy</b>.<br>Nikita has first come up<br> with idea to create<br> a movie-app.Also<br> Nikita developed the app's UI .<br>Artemy in fact organizated the <br> form's authorization<br> ,and some other tasks. </p>
+                            </div>
+                    </div>
+                    <li class="ul-list__elem">What technologies did we use?</li>
+                    <div class="pushInfo">
+                        <div class="page page1" id="page2">
+                            <p>In this app we used 4 techonologies  :<b>HTML</b> ,<b>CSS</b> ,<b>JAVASCRIPT</b>,<br><b>PYTHON</b>.</p>
+                        </div>
+                    </div>
+                    <li class="ul-list__elem">Our biography </li>
+                    <div class="pushInfo">
+                        <div class="biografy">
+                            <div class="aboutNic">
+                                <h1 class="title">Nikita</h1>
+                                <p class="aboutNic__descr" id="nicDescr">My name is<br> Nikita.I am a<br> frontend deve<br>loper with 3 years <br>of expirience.My<br> web-stack right now<br> is:HTML,CSS,JAVAS<br>CRIPT,WORDPRESS,<br>SCSS.Besides develop<br>ment i actually love to<br> play video games,and <br> to play sport games. </p>
+                            </div>
+                            <div class="aboutArtemy">
+                                <h1 class="title">Artemy</h1>
+                                <p class="aboutNic__descr" id="artemyDescr">My name is <br>Artemy.I am a<br>backend deve<br>loper with 3 years <br> of expirience.I basica<br>lly write code on PYTHON.<br>I use PYTHON DJANGO to <br> code backend part of <br>web-sites.In the free time ,<br>i love to play video games ,<br>like Fortnite ,and to spend <br>time with family.</p>
+                            </div>
+                        </div>
+                    </div>
+                </ul>
+             
+            </div>
+        
+        </nav>
+    </footer>
 </div>
-    <script src="{% static 'js/app.js' %}"></script>
+    <script  src="{% static 'js/app.js' %}"></script>
+    <script type="module" src="{% static 'js/questions.js' %}"></script>
+    <script src="{% static 'js/slider.js' %}"></script>
+    <script type="module" src="{% static 'js/footer.js' %}"></script>
+    <script type="module" src="{% static 'js/header.js' %}"></script>
+    <script type="module" src="{% static 'js/languge.js' %}"></script>
+    <script type="module" src="{% static 'js/translate.js' %}"></script>
 </body>
 
 </html>

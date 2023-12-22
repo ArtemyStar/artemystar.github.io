@@ -10,11 +10,11 @@
         @font-face{
             font-family: 'Agbalumo';
             src: local('Agbalumo'),
-            url(fonts/Agbalumo-Regular.ttf);
+            url({% static 'fonts/Agbalumo-Regular.ttf' %});
 
         }
         body{
-            background-image: url('img/backround-image.jpg');
+            background-image: url({% static 'img/backround-image.jpg' %});
             overflow: hidden;
             background-repeat: no-repeat;
             background-size: cover;
@@ -44,6 +44,7 @@
             height: 100vh;
             
         }
+        
         .form{
             margin-left: 600px;
             width: 500px;
@@ -219,23 +220,23 @@
         </header>
         <main class="main-part">
             <form class="form" action="" method="post">
-                {% csrf_token %}
                 <h1 class="form__title">Sign up</h1>
                 
                 <div class="form__first-input">
                     <img src="{% static 'img/user.png' %}" alt="">
-                    {{ form.Name }}
+
+                    <input placeholder="Name" maxlength="26" required type="text" name="Name" id="name">
                 </div>
                 <div class="form__second-input">
                     <img src="{% static 'img/gmail.png' %}" alt="">
-                    {{ form.Gmail }}
+
+                    <input placeholder="Gmail"  required type="email" name="Gmail" id="gmail">
                 </div>
                 <div class="form__third-input">
                     <img src="{% static 'img/passw.png' %}" alt="">
-                    {{ form.passw }}
+
+                    <input placeholder="password"  required type="password" name="passw" id="password">
                 </div>
-                <span>{{ error }}</span>
-                <button type="submit">Отправить</button>
                 <div class="form__button-part">
                     <button id="firstBtn" type="submit" id="singUp">Sign up</button>
                     <button id="secondBtn" type="submit" id="logIn">Log in</button>
@@ -255,8 +256,8 @@
 
                     <input placeholder="password"  required type="password" name="passw" id="password">
                 </div>
-                <div class="form__button-part">
-                    <button id="firstBtn" type="submit" id="singUp">Sign up</button>
+                <div  class="form__button-  art">
+                    <form action=""  method='post'><input  id="firstBtn" type="submit" id="singUp">Sign up</input></form>
                     <button id="secondBtn" type="submit" id="logIn">Log in</button>
                 </div>
             </form>
