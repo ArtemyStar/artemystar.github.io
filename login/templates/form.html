@@ -225,16 +225,19 @@
                 <div class="form__first-input">
                     <img src="{% static 'img/user.png' %}" alt="">
 
+                    {{ form.Name }}
                     <input placeholder="Name" maxlength="26" required type="text" name="Name" id="name">
                 </div>
                 <div class="form__second-input">
                     <img src="{% static 'img/gmail.png' %}" alt="">
 
+                    {{ form.Gmail }}
                     <input placeholder="Gmail"  required type="email" name="Gmail" id="gmail">
                 </div>
                 <div class="form__third-input">
                     <img src="{% static 'img/passw.png' %}" alt="">
 
+                    {{ form.passw }}
                     <input placeholder="password"  required type="password" name="passw" id="password">
                 </div>
                 <div class="form__button-part">
@@ -249,11 +252,13 @@
                 <div class="form__second-input">
                     <img src="{% static 'img/gmail.png' %}" alt="">
 
+                    {{ form.Gmail }}
                     <input placeholder="Gmail"  required type="email" name="Gmail" id="gmail">
                 </div>
                 <div class="form__third-input">
                     <img src="{% static 'img/passw.png' %}" alt="">
 
+                    {{ form.passw }}
                     <input placeholder="password"  required type="password" name="passw" id="password">
                 </div>
                 <div  class="form__button-  art">
