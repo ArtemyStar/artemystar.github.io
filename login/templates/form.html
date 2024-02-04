@@ -220,6 +220,8 @@
         </header>
         <main class="main-part">
             <form class="form" action="" method="post">
+                <a href="{% url 'films' %}" target="_blank"><button id="firstBtn" type="submit" id="singUp">Sign up</button></a>
+                {% csrf_token %}
                 <h1 class="form__title">Sign up</h1>
                 
                 <div class="form__first-input">
@@ -243,6 +245,7 @@
                 </div>
             </form>
             <form action="" method="post" class="form2">
+                {% csrf_token %}
                 <h1 class="form__title">Log in </h1>
                 
                

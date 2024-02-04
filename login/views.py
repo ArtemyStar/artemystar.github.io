@@ -13,7 +13,7 @@ def form(request):
 
         if form.is_valid():
             form.save()
-            redirect('home')
+            return redirect('films')
         else:
             error = 'Неверная форма'
 
@@ -23,3 +23,7 @@ def form(request):
         'error': error
     }
     return render(request, 'form.html', data)
+
+
+def films(request):
+    return render(request, 'films.html')
